@@ -1,0 +1,23 @@
+{
+  "name": "notary-slides",
+  "productName": "Notary Slides ",
+  "version": "1.0.0",
+  "description": "An electron based desktop application made to display and present slides from markdown files",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "markdown",
+    "presentation",
+    "electron",
+    "nodejs",
+    "desktop"
+  ],
+  "author": "Speeif",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^22.0.2"
+  }
+}
