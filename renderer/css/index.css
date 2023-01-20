@@ -1,0 +1,53 @@
+:root{
+    --menu-background: 200,200,200;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html { 
+    height: 100%;
+}
+
+body {
+    width: 100%; height: 100%;
+}
+
+nav{
+    background-color: rgb(var(--menu-background));
+    height: 2rem;
+}
+
+#columns {
+    display: grid;
+    grid-template-columns: 1fr 7px 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "markdown mover presentation";
+    height: calc(100% - 2rem);
+}
+
+#markdown {
+    grid-area: markdown;
+    width: 100%;
+    height: 100%;
+}
+
+.presentation {
+    grid-area: presentation;
+    width: 100%;
+}
+
+#mover {
+    cursor: col-resize;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background: rgb(127,127,127);
+    color: rgb(188,188,188);
+    justify-content: center;
+    align-items: center;
+    line-height: 15px;
+}

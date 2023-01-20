@@ -1,0 +1,62 @@
+:root{
+    --numbers-column-width: 3.5rem;
+}
+
+
+#markdown{
+    display: grid;
+    position: relative;
+    grid-template-columns: var(--numbers-column-width) 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "numbers code";
+    overflow: hidden;
+}
+
+.mdbgnumb{
+    position:absolute;
+    background-color: #333;
+    top:0;
+    left:0;
+    height:100%;
+    width: var(--numbers-column-width);
+    z-index: -1;
+}
+
+.mdbgcode{
+    position:absolute;
+    background-color: #555;
+    top:0;
+    right:0;
+    height:100%;
+    width: calc(100% - var(--numbers-column-width));
+    z-index: -1;
+}
+
+#code-wrapper{
+    display:grid;
+    grid-column-start: numbers;
+    grid-column-end: code;
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+
+    grid-template-columns: var(--numbers-column-width) 1fr;
+    grid-template-areas: "numbers code";
+}
+
+#code-wrapper #numbers{
+    grid-area: numbers;
+}
+
+#code-wrapper #numbers p{
+    display:flex;
+    justify-content:center
+}
+
+#code-wrapper #code{
+    grid-area: code;
+    height:100%;
+    width:100%;
+    outline: none;
+    margin-left: 0.2rem;
+}
