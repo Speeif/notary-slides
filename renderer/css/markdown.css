@@ -2,7 +2,6 @@
     --numbers-column-width: 3.5rem;
 }
 
-
 #markdown{
     display: grid;
     position: relative;
@@ -37,6 +36,7 @@
     grid-column-start: numbers;
     grid-column-end: code;
     overflow-y: scroll;
+    overflow-X: hidden;
     width: 100%;
     height: 100%;
 
@@ -49,14 +49,25 @@
 }
 
 #code-wrapper #numbers p{
+    color: #eee;
     display:flex;
-    justify-content:center
+    justify-content:right;
+    padding-right: 1.2rem;
 }
 
-#code-wrapper #code{
+#code-wrapper #code-column{
     grid-area: code;
     height:100%;
     width:100%;
+}
+
+#code-wrapper #code-column #code{
     outline: none;
-    margin-left: 0.2rem;
+    padding-left: 0.4rem;
+}
+
+#code-wrapper #code-column #code:focus{
+    border-left: #333 solid 0.1rem;
+    margin-left: 0.1rem;
+    padding-left: 0.2rem;
 }

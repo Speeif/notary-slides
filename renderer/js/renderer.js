@@ -13,7 +13,7 @@ document.addEventListener("mouseup", () => isDown = false)
 document.addEventListener("mousemove", (e) => {
     e.preventDefault();
     if (isDown) {
-        let minspace = 150;
+        let minspace = 250;
         let moveAmount = e.clientX + offsetx - 7;
         // Clamp value in both left and right column
         let left = Math.min(Math.max(moveAmount, minspace), window.innerWidth - 7 - minspace)
